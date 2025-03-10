@@ -9,7 +9,7 @@ function App() {
   return (
     <Routes>
       {/* Login route without sidebar */}
-      <Route path="/login" element={<Login />} />
+      <Route path="/logina" element={<Login />} />
 
       {/* All other routes with sidebar */}
       <Route
