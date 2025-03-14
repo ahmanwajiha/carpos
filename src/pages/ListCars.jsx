@@ -21,17 +21,53 @@ function ListCars() {
     const pageSize = 5;
 
     // Fetch car data from the backend
+
     useEffect(() => {
-        axios.get('http://localhost:5000/api/cars')
-            .then(response => {
-                setCars(response.data);
-                setLoading(false);
-            })
-            .catch(err => {
-                setError('Error fetching car data.');
-                setLoading(false);
-            });
+        setCars([
+            {
+                _id: "1",
+                brand: "SUZUKI",
+                model: "Grand Vitara",
+                year: 2023,
+                price: 43300000,
+                images: [
+                    "/images/suzuki-vitara-1.jpg",
+                    "/images/suzuki-vitara-2.jpg",
+                ],
+                transmission: "Automatic",
+                fuelType: "Hybrid",
+                isNew: true,
+            },
+            {
+                _id: "2",
+                brand: "BYD",
+                model: "Atto 3",
+                year: 2023,
+                price: 42000000,
+                images: [
+                    "/images/byd-atto3-1.jpg",
+                    "/images/byd-atto3-2.jpg",
+                ],
+                transmission: "Automatic",
+                fuelType: "Electric",
+                isNew: true,
+            },
+        ]);
     }, []);
+
+
+
+    // useEffect(() => {
+    //     axios.get('http://localhost:5000/api/cars')
+    //         .then(response => {
+    //             setCars(response.data);
+    //             setLoading(false);
+    //         })
+    //         .catch(err => {
+    //             setError('Error fetching car data.');
+    //             setLoading(false);
+    //         });
+    // }, []);
 
     // Filter cars based on filters
     const filteredCars = cars.filter(car => {

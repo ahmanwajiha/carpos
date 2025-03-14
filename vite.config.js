@@ -9,9 +9,9 @@ export default defineConfig({
     tailwindcss(),
 
   ],
-  build: {
-    rollupOptions: {
-      external: ['axios'], // ✅ Ensures axios is properly resolved
-    }
-  }
+  // build: {
+  //   rollupOptions: {
+  //     external: ['axios'], // ✅ Ensures axios is properly resolved
+  //   }
+  // }
 })
