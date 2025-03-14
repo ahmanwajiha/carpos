@@ -14,6 +14,8 @@ import ListCars from "./pages/ListCars";
 import CarFinancialForm from './pages/CarFinancialForm';
 import ViewCarDetails from './pages/ViewCarDetails';
 import NewCarsSection from "./components/NewCarSection";
+import SellCar from "./components/SellCar";
+
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
 
 
             <NewCarsSection />
+
+            <SellCar />
 
 
           </div>

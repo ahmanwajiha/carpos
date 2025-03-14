@@ -29,7 +29,14 @@ const Navbar = () => {
                 {/* Navigation Links */}
                 <ul className="hidden md:flex space-x-6 font-medium transition-all">
                     <li><Link to="/buy" className={`hover:text-blue-600 ${isScrolled ? "text-black" : "text-white"}`}>Buy</Link></li>
-                    <li><Link to="/sell" className={`hover:text-blue-600 ${isScrolled ? "text-black" : "text-white"}`}>Sell</Link></li>
+                    <li>
+                        <a href="#sell-car"
+                            className={`cursor-pointer hover:text-blue-600 ${isScrolled ? "text-black" : "text-white"}`}
+                        >
+                            Sell
+                        </a>
+                    </li>
+
                     <li><Link to="/finance" className={`hover:text-blue-600 ${isScrolled ? "text-black" : "text-white"}`}>Finance</Link></li>
                     <li><Link to="/insure" className={`hover:text-blue-600 ${isScrolled ? "text-black" : "text-white"}`}>Insure</Link></li>
                     <li><Link to="/blog" className={`hover:text-blue-600 ${isScrolled ? "text-black" : "text-white"}`}>Blog</Link></li>
